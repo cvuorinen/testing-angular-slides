@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { CellComponent } from './cell.component';
+import { SpreadsheetService } from "app/spreadsheet.service";
 
 describe('CellComponent', () => {
   let component: CellComponent;
@@ -8,7 +10,9 @@ describe('CellComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CellComponent ]
+      declarations: [ CellComponent ],
+      imports: [ ReactiveFormsModule ],
+      providers: [ SpreadsheetService ],
     })
     .compileComponents();
   }));
