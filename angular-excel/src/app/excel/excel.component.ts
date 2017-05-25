@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-excel',
+  selector: 'excel',
   templateUrl: './excel.component.html',
   styleUrls: ['./excel.component.css']
 })
-export class ExcelComponent implements OnInit {
+export class ExcelComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public columns = ['A', 'B', 'C'];
+  public rows = [1, 2, 3, 4];
 
 }
