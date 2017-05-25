@@ -1,4 +1,6 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -11,6 +13,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     }).compileComponents();
   }));
 
@@ -25,13 +28,13 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   }));
 
-  it(`should have as title 'app'`, async(() => {
-    expect(component.title).toEqual('app');
+  it(`should have as title 'Angular Excel'`, async(() => {
+    expect(component.title).toEqual('Angular Excel');
   }));
 
   it('should render title in a h1 tag', async(() => {
     const titleElement = element.querySelector('h1');
 
-    expect(titleElement.textContent).toContain('Welcome to app!');
+    expect(titleElement.textContent).toContain('Angular Excel');
   }));
 });
